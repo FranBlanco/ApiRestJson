@@ -21,11 +21,8 @@ public class CouponServiceImpl implements CouponService {
 
     @Override
     public double calculate(Order order) {
-            System.out.println("Estoy en calculate " + order);
         double amount = summarizeProducts(productsOf(order));
-            System.out.println("Estoy en calculate " + amount);
         double discount = obtainDiscount(couponOf(order));
-            System.out.println("Estoy en calculate " + discount);
         return applyCoupon(amount,discount);
 
     }
@@ -47,7 +44,6 @@ public class CouponServiceImpl implements CouponService {
     }
 
     private Optional<Coupon> couponOf(Order order){
-//        return Optional.empty();
         return couponRepository.findById(order.getCouponName());
     }
 
