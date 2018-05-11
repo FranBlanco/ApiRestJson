@@ -1,6 +1,6 @@
 package app.service;
 
-import model.Order;
+import app.model.Order;
 import org.springframework.stereotype.Service;
 
 @Service

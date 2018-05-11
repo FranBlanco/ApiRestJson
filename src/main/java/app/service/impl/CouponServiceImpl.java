@@ -1,9 +1,10 @@
 package app.service.impl;
 
+import app.repository.CouponRepository;
 import app.service.CouponService;
-import model.Coupon;
-import model.Order;
-import model.Product;
+import app.model.Coupon;
+import app.model.Order;
+import app.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +16,8 @@ import java.util.stream.Collectors;
 @Service
 public class CouponServiceImpl implements CouponService {
 
-//    @Autowired
-//    private CouponRepository couponRepository;
+    @Autowired
+    private CouponRepository couponRepository;
 
     @Override
     public double calculate(Order order) {
@@ -46,8 +47,8 @@ public class CouponServiceImpl implements CouponService {
     }
 
     private Optional<Coupon> couponOf(Order order){
-        return Optional.empty();
-//        return couponRepository.findById(order.getCouponName());
+//        return Optional.empty();
+        return couponRepository.findById(order.getCouponName());
     }
 
     private double applyCoupon(double amount, double discount) {

@@ -1,11 +1,11 @@
-package model;
+package app.model;
 
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+@Entity(name="Coupons")
 public class Coupon {
 
     @Id

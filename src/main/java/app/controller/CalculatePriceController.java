@@ -1,7 +1,7 @@
 package app.controller;
 
 import app.service.CouponService;
-import model.Order;
+import app.model.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
