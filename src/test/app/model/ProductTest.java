@@ -8,7 +8,6 @@ public class ProductTest {
     @Test
     public void testConstructorWithArguments(){
         Product product = new Product(1,10.0);
-//        Assert.assertEquals(1,product.getId());
         Assert.assertEquals(1,product.getId().intValue());
         Assert.assertEquals(10.0,0,product.getPrice().doubleValue());
 

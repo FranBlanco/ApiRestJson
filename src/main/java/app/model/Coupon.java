@@ -37,11 +37,4 @@ public class Coupon {
         this.value = value;
     }
 
-    @Override
-    public String toString() {
-        return "Coupon{" +
-                "name='" + name + '\'' +
-                ", value=" + value +
-                '}';
-    }
 }

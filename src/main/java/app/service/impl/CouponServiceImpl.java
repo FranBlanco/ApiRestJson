@@ -44,6 +44,10 @@ public class CouponServiceImpl implements CouponService {
     }
 
     private Optional<Coupon> couponOf(Order order){
+        if(order == null){
+            return Optional.empty();
+        }
+
         return couponRepository.findById(order.getCouponName());
     }
 

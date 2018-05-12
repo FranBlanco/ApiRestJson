@@ -7,6 +7,11 @@ public class Order {
     private String couponName;
     private List<Product> products;
 
+    public Order(String couponName, List<Product> products) {
+        this.couponName = couponName;
+        this.products = products;
+    }
+
     public String getCouponName() {
         return couponName;
     }
@@ -23,11 +28,5 @@ public class Order {
         this.products = products;
     }
 
-    @Override
-    public String toString() {
-        return "Order{" +
-                "couponName='" + couponName + '\'' +
-                ", products=" + products +
-                '}';
-    }
+
 }
